@@ -119,8 +119,8 @@ Change absolute paths for `INPU_DIR` and `OUTPUT_DIR` on lines `20-21`
    python script_3_txt_files_creator.py
 ```
 
-[image]()
-[image]()
+![image](https://github.com/MatNepo/SGN_Reamaster/blob/main/images/skript_3_1.png)
+![image](https://github.com/MatNepo/SGN_Reamaster/blob/main/images/skript_3_2.png)
 
 ## Process the data
 
