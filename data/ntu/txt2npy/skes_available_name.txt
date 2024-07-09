@@ -1,0 +1,9 @@
+NTU_RGBD120_samples_with_missing_skeletons.txt
+NTU_RGBD_samples_with_missing_skeletons.txt
+read_skeleton_file.m
+script.py
+show_skeleton_on_depthmaps.m
+show_skeleton_on_IR_frames.m
+show_skeleton_on_RGB_frames.m
+txt2npy.py
+txt_skes_creator.py
