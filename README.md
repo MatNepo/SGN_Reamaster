@@ -89,8 +89,8 @@ Change `dataset_path` on `69` line
    python script_1_skes_creator.py
 ```
 
-[image]()
-[image]()
+![image](https://github.com/MatNepo/SGN_Reamaster/blob/main/images/skript_1_1.png)
+![image](https://github.com/MatNepo/SGN_Reamaster/blob/main/images/skript_1_2.png)
 
 #### **script_2_skes_creator.py**
 
@@ -101,9 +101,6 @@ in `./data/ntu/statistics` directory.
    python script_2_skes_creator.py
 ```
 
-[image]()
-[image]()
-
 If you decided to change the size, don't forget to change the amount of files in the dataset in 
 `3_seq_transformation.py` file on the 132 line:
 
@@ -111,8 +108,8 @@ If you decided to change the size, don't forget to change the amount of files in
    labels_vector = np.zeros((num_skes, 60))  # 60 is an amount of actions/labels inside the dataset
 ```
 
-[image]()
-[image]()
+![image](https://github.com/MatNepo/SGN_Reamaster/blob/main/images/skript_2_1.png)
+![image](https://github.com/MatNepo/SGN_Reamaster/blob/main/images/skript_2_2.png)
 
 #### **script_3_txt_files_creator.py**
 
