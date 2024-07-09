@@ -48,6 +48,35 @@ pip install -r requirements.txt
 2. Move `all_sqe` to `./data/NW-UCLA`
 
 # Data Preparation
+
+## Data Preparation Scripts
+
+This repository contains four Python scripts used for data preparation:
+
+1. #### **script_0_to_copy.py**: 
+   Copies files from one directory to another using multi-threading for 
+improved performance.
+
+2. #### **script_1_copy_logs.py**: 
+   Creates a reduced dataset by filtering and copying files based on 
+specific criteria (e.g., file size, action numbers). It also generates 
+a log of non-copied files.
+
+3. #### **script_2_skes_creator.py**: 
+   Generates a 'skes_available_name.txt' file containing a list of 
+skeleton file names without extensions, which is used in subsequent 
+processing steps.
+
+4. #### **script_3_txt_files_creator.py**: 
+   Processes the `skes_available_name.txt` file to extract specific 
+information (`setup`, `camera`, `performer`, `replication` and action 
+class `label`) from each filename and writes this data into separate 
+output files.
+
+These scripts are designed to prepare and organize data for the SGN 
+(Semantics-Guided Neural Networks) project, facilitating efficient data 
+handling and preprocessing.
+
 ## Run scripts
 
 Before running scripts 1 and 3 don't forget to change paths:
@@ -60,6 +89,9 @@ Change `dataset_path` on `69` line
    python script_1_skes_creator.py
 ```
 
+[image]()
+[image]()
+
 #### **script_2_skes_creator.py**
 
 Change `dataset_path` on the 12th line and run the code. It creates `skes_available_name.txt` file 
@@ -69,12 +101,18 @@ in `./data/ntu/statistics` directory.
    python script_2_skes_creator.py
 ```
 
+[image]()
+[image]()
+
 If you decided to change the size, don't forget to change the amount of files in the dataset in 
 `3_seq_transformation.py` file on the 132 line:
 
 ```python
    labels_vector = np.zeros((num_skes, 60))  # 60 is an amount of actions/labels inside the dataset
 ```
+
+[image]()
+[image]()
 
 #### **script_3_txt_files_creator.py**
 
@@ -83,6 +121,9 @@ Change absolute paths for `INPU_DIR` and `OUTPUT_DIR` on lines `20-21`
 ```bash
    python script_3_txt_files_creator.py
 ```
+
+[image]()
+[image]()
 
 ## Process the data
 
