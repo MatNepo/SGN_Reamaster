@@ -17,8 +17,8 @@ import re
 import os
 
 # Пути к файлам
-INPUT_FILE = r"D:\Users\Legion\BIA Technologies\SGN-master\data\ntu\statistics\skes_available_name.txt"
-OUTPUT_DIR = r"D:\Users\Legion\BIA Technologies\SGN-master\data\ntu\statistics"
+INPUT_FILE = r"/data/ntu/statistics/skes_available_name.txt"
+OUTPUT_DIR = r"/data/ntu/statistics"
 
 # Массив с названиями выходных файлов
 FILES = ['setup', 'camera', 'performer', 'replication', 'label']

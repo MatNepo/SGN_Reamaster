@@ -14,7 +14,7 @@ def main():
     # skes_path = 'D:/Users/Legion/BIA Technologies/dataset_SGN/raw_txt'
 
     # Путь, где будет создан файл skes_available_name.txt
-    output_path = './data/ntu/statistics'  # Измените этот путь на нужный
+    output_path = '../data/ntu/statistics'  # Измените этот путь на нужный
 
     # Получаем список всех файлов в директории skes_path
     files = os.listdir(skes_path)

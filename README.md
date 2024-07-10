@@ -10,6 +10,12 @@ from [this](https://github.com/microsoft/SGN/tree/master) repository.
 python -m venv venv
 ```
 
+Activate virtual environment:
+
+```bash
+cd ./venv/Scripts/activate
+```
+
 ## 2. Download CUDA
 ```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
@@ -79,6 +85,12 @@ handling and preprocessing.
 
 ## Run scripts
 
+Go to the directory with the scripts
+
+```bash
+cd scripts
+```
+
 Before running scripts 1 and 3 don't forget to change paths:
 
 #### **script_1_copy_logs.py**
@@ -86,7 +98,7 @@ Before running scripts 1 and 3 don't forget to change paths:
 Change `dataset_path` on `69` line
 
 ```bash
-   python script_1_skes_creator.py
+python script_1_skes_creator.py
 ```
 
 ![image](https://github.com/MatNepo/SGN_Reamaster/blob/main/images/skript_1_1.png)
@@ -98,14 +110,14 @@ Change `dataset_path` on the 12th line and run the code. It creates `skes_availa
 in `./data/ntu/statistics` directory.
 
 ```bash
-   python script_2_skes_creator.py
+python script_2_skes_creator.py
 ```
 
 If you decided to change the size, don't forget to change the amount of files in the dataset in 
 `3_seq_transformation.py` file on the 132 line:
 
 ```python
-   labels_vector = np.zeros((num_skes, 60))  # 60 is an amount of actions/labels inside the dataset
+labels_vector = np.zeros((num_skes, 60))  # 60 is an amount of actions/labels inside the dataset
 ```
 
 ![image](https://github.com/MatNepo/SGN_Reamaster/blob/main/images/skript_2_1.png)
@@ -116,7 +128,7 @@ If you decided to change the size, don't forget to change the amount of files in
 Change absolute paths for `INPU_DIR` and `OUTPUT_DIR` on lines `20-21`
 
 ```bash
-   python script_3_txt_files_creator.py
+python script_3_txt_files_creator.py
 ```
 
 ![image](https://github.com/MatNepo/SGN_Reamaster/blob/main/images/skript_3_1.png)
@@ -126,12 +138,17 @@ Change absolute paths for `INPU_DIR` and `OUTPUT_DIR` on lines `20-21`
 
 To find the code below go to the dir: `.\data\ntu`. Here you'll find 3 scripts to process the data
 
+```bash
+cd ..
+cd .\data\ntu
+```
+
 #### **1_get_raw_skes_data.py**
 
 Change `skes_path` on `140` line (path to the new one dataset which was created above)
 
 ```bash
-   python 1_get_raw_skes_data.py
+python 1_get_raw_skes_data.py
 ```
 
 #### **2_get_raw_denoised_data.py**
@@ -139,7 +156,7 @@ Change `skes_path` on `140` line (path to the new one dataset which was created 
 Just run the code
 
 ```bash
-   python 2_get_raw_denoised_data.py
+python 2_get_raw_denoised_data.py
 ```
 
 #### **3_seq_transformation.py**
@@ -147,7 +164,7 @@ Just run the code
 Just run the code
 
 ```bash
-   python 3_seq_transformation.py
+python 3_seq_transformation.py
 ```
 
 # Training
