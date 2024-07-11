@@ -21,7 +21,8 @@ function bodyinfo = read_skeleton_file(filename)
 fileid = fopen(filename);
 framecount = fscanf(fileid,'%d',1); % no of the recorded frames
 
-bodyinfo=[]; % to store multiple skeletons per frame
+bodyinfo = read_skeleton_file('D:/Users/Legion/BIA Technologies/dataset_SGN/raw_txt/S001C001P001R001A060.skeleton');
+% bodyinfo=[]; % to store multiple skeletons per frame
 
 for f=1:framecount
     bodycount = fscanf(fileid,'%d',1); % no of observerd skeletons in current frame

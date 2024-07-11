@@ -97,6 +97,12 @@ Before running scripts 1 and 3 don't forget to change paths:
 
 Change `dataset_path` on `69` line
 
+```python
+dataset_path = r"D:\Users\Legion\BIA Technologies\dataset_SGN"  # folder with datasets
+```
+
+Run the script:
+
 ```bash
 python script_1_skes_creator.py
 ```
@@ -106,15 +112,21 @@ python script_1_skes_creator.py
 
 #### **script_2_skes_creator.py**
 
-Change `dataset_path` on the 12th line and run the code. It creates `skes_available_name.txt` file 
+Change `dataset_path` on `12` line and run the code. It creates `skes_available_name.txt` file 
 in `./data/ntu/statistics` directory.
+
+```python
+dataset_path = r"D:\Users\Legion\BIA Technologies\dataset_SGN"  # folder with datasets
+```
+
+Run the script:
 
 ```bash
 python script_2_skes_creator.py
 ```
 
 If you decided to change the size, don't forget to change the amount of files in the dataset in 
-`3_seq_transformation.py` file on the 132 line:
+`3_seq_transformation.py` file on `132` line:
 
 ```python
 labels_vector = np.zeros((num_skes, 60))  # 60 is an amount of actions/labels inside the dataset
@@ -126,6 +138,14 @@ labels_vector = np.zeros((num_skes, 60))  # 60 is an amount of actions/labels in
 #### **script_3_txt_files_creator.py**
 
 Change absolute paths for `INPU_DIR` and `OUTPUT_DIR` on lines `20-21`
+
+
+```python
+INPUT_FILE = r"/data/ntu/statistics/skes_available_name.txt"
+OUTPUT_DIR = r"/data/ntu/statistics"
+```
+
+Run the script:
 
 ```bash
 python script_3_txt_files_creator.py
@@ -146,6 +166,12 @@ cd .\data\ntu
 #### **1_get_raw_skes_data.py**
 
 Change `skes_path` on `140` line (path to the new one dataset which was created above)
+
+```python
+skes_path = 'D:/Users/Legion/BIA Technologies/dataset_SGN/raw_txt_mini'
+```
+
+Run the code:
 
 ```bash
 python 1_get_raw_skes_data.py
