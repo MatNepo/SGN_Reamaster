@@ -119,17 +119,17 @@ in `./data/ntu/statistics` directory.
 dataset_path = r"D:\Users\Legion\BIA Technologies\dataset_SGN"  # folder with datasets
 ```
 
-Run the script:
-
-```bash
-python script_2_skes_creator.py
-```
-
 If you decided to change the size, don't forget to change the amount of files in the dataset in 
 `3_seq_transformation.py` file on `132` line:
 
 ```python
 labels_vector = np.zeros((num_skes, 60))  # 60 is an amount of actions/labels inside the dataset
+```
+
+Run the script:
+
+```bash
+python script_2_skes_creator.py
 ```
 
 ![image](https://github.com/MatNepo/SGN_Reamaster/blob/main/images/skript_2_1.png)
